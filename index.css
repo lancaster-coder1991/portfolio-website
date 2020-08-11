@@ -34,3 +34,21 @@ nav {
     text-align: center;
     width: 50%;
 }
+
+.Main_Page_List {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 40%;
+    margin: 5px;
+}
+
+#leftlist {
+    float: left;
+}
+
+#rightlist {
+    overflow:hidden;
+    left: 5px;
+    right: 5px;
+}
