@@ -37,7 +37,6 @@ nav {
 
 .Main_Page_List {
     display: inline-block;
-    text-align: center;
     position: relative;
     width: 40%;
     margin: 5px;
@@ -51,4 +50,9 @@ nav {
     overflow:hidden;
     left: 5px;
     right: 5px;
+    float: right;
+}
+
+.list_header {
+    text-align: center;
 }
