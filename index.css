@@ -1,58 +1,145 @@
 * {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
-    max-width: auto;        
-  }
-
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Cambria;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: auto;
 }
 
-header {
-    width: 75%;
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  margin: 0px;
+  font-size: 2vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 h1 {
-    position: relative;
-    font-size: 72pt;
-    color: blue; 
+  font-size: 8vh;
+  width: 100%;
+  float: left;
+}
+
+@media screen and (width: 500px) {
+  body {
+    font-size: 5vh;
+  }
+}
+
+#subtitle {
+  font-size: 6vh;
+}
+
+#titlediv {
+  display: flex;
+  border-bottom: 1px solid black;
+  width: 100%;
+  background-color: #034748;
 }
 
 .Title {
-    width: 75%;
-    text-align: center;
-    margin: auto;
-    max-width: 1000px;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  padding-bottom: 10px;
+  color: white;
+  flex-wrap: nowrap;
+}
+
+#homeimg {
+  float: right;
+  width: 15%;
+  min-width: 150px;
+  flex-shrink: 0;
 }
 
 nav {
-    margin: auto;
-    text-align: center;
-    width: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  outline: 5px;
+  background-color: #1481ba;
 }
 
-.Main_Page_List {
-    display: inline-block;
-    position: relative;
-    width: 40%;
-    margin: 5px;
+nav > a {
+  border: 2px solid transparent;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  font-size: calc(12px + 1.5vw);
+  flex: 1;
+  text-align: center;
 }
 
-#leftlist {
-    float: left;
+nav > a:hover {
+  border: 1px solid silver;
 }
 
-#rightlist {
-    overflow:hidden;
-    left: 5px;
-    right: 5px;
-    float: right;
+#homebio {
+  padding: 1%;
+  text-align: center;
+  width: 75%;
+}
+
+#Main_Page_Top_Lists {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Main_Page_Top_List {
+  /* display: inline-block;
+  position: relative; */
+  flex: 1;
 }
 
 .list_header {
-    text-align: center;
+  text-align: center;
+}
+
+#topleftlist {
+  left: 5px;
+  right: 5px;
+}
+
+#toprightlist {
+  overflow: hidden;
+  left: 5px;
+  right: 5px;
+}
+
+#Main_Page_Bottom_Lists {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#Main_Page_Bottom_List {
+  display: inline-block;
+  position: relative;
+}
+
+#bottomleftlist {
+  left: 5px;
+  right: 5px;
+}
+
+#bottomrightlist {
+  overflow: hidden;
+  left: 5px;
+  right: 5px;
+}
+
+#extra_info {
+  margin-top: 50px;
 }

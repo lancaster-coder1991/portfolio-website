@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template: repeat(2, 50px) / repeat(3, 1fr); /* first defines no. of rows and their height, then columns and their width. shorthand for:
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 50px; */
+  grid-gap: 3px;
+}
+
+div {
+  padding: 2px;
+  text-align: center;
+}
