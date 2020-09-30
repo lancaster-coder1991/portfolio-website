@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http_equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
-    <title>About</title>
-</head>
-<body>
-    <header>
-        <h1 class="Title">About</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="#">Contact (currently blank)</a>
-        </nav>
-    </header>
-    <img src="./images/George Scott.jpg" alt="A picture of me at home" width="25%">
-    <p>Hello! My name is George Scott. I've worked in the softare sector for a while, but I am only just starting to learnt o code professionally!</p>
-    <a href="https://github.com/lancaster-coder1991">My GitHub</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http_equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>George Scott Portfolio Site</title>
+  </head>
+  <body>
+    <div class="wrapper">
+    <div id="titlediv">
+      <h1 class="Title">George Scott</br><div id="subtitle">Software Developer</div></h1>
+      <img
+        id="homeimg"
+        src="./images/George Scott.jpg"
+        alt="Picture of me"
+      />
+    </div>
+    <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active-page" href="about.html">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+    <h2 style="text-align:center">Bio</h2>
+    <section id="bio">
+            <p id="firstpara" class="biopara">Hello! My name is George Scott. My passion is using code to solve problems and create clever solutions. Let me tell you my story.</p>
+            <p id="secondpara" class="biopara">I have always been a lover of music and maths. In particular, I have pursued the study of music from a young age, striving toward the mastery of a selection of instruments and the theory of music until after my undergraduate degree in Music.
+                Initially assuming I would be a teacher, I gradually strayed from this idea over the course of my degree, and so upon graduating in 2012 I had the task of deciding where I would take myself next.
+                After a couple of years working in a musical instrument department store, I decided I would try my hand at 'Arts Admin' - the mysterious profession of people who work behind the scenes to bring you the
+                joys of theatre, live music, museum displays, and much more. I completed a part-time master's degree in Arts Management, Policy and Practice, whilst also managing to attain several positions working as an administrator for classical music organisations. This saw me take part in exciting
+                projects such as the delivery of a world-class classical music festival and summer school for gifted musicians in the heart of the Lake District.
+            </p>
+            <p id="thirdpara" class="biopara">Then, in April 2017, I joined Spektrix, a market-leading provider of ticketing, CRM and fundraising software primarily aimed at arts organisations. My initial position was working in their Support, Training and Consultancy (STC) department - helping clients with everyday use of the software and leading on longer-term data consultancy projects with them as well.
+                Whilst the responsibilities of this role were broad, it quickly became apparent that the areas in which I excelled were mentoring my fellow team members, driving internal initiatives to promote better company efficiency, and the many 'technical' aspects of the job. My proficiency in the former two of this list was demonstrated by my promotion to a management
+                position after only 18 months at the company. This saw me lead a new team of consultants to become a unit that was even greater than the sum of its parts, whilst also developing high-profile initiatives to reshape how the department operated as the company continued to grow rapidly.
+            </p>
+            <p id="fourthpara" class="biopara">However, even whilst enjoying managing and mentoring my colleagues, much of my time was still deliberately spent on working on the technical side of supporting the company's clients. This included working on website integrations with our software; developing and troubleshooting HTML, CSS and JavaScript, whilst also making use of the software's
+                REST API in pursuit of beautiful, bespoke websites. Included too was the building of bespoke reports for the client base, working with XML data in Visual Studio using Microsoft's SQL Server Reporting Services (SSRS) coding framework to develop complex and innovative ways of displaying data. My natural interest and aptitude for these areas of the department's work led
+                me to take advantage of the company's excellent learning and development programmes and to start teaching myself more complex JavaScript on the job, whilst also setting up my own company initiative that saw the company's software engineers teach members of the STC team basic SQL.
+            </p>
+            <p id="fifthpara" class="biopara">After about 18 months working and thriving in my management position, I decided to make the most out of the working conditions made necessary by the Covid-19 pandemic and volunteered for full-time furlough from my position in June 2020. The purpose of this was to prepare to undertake full-time training in software development.
+                As such, I signed up to study with NorthCoders, a provider of full-time, full stack software development bootcamps in the North of England, and began my formal studies with in August 2020 - I am on track to graduate in November 2020,
+            </p>
+            <p id="sixthpara" class="biopara">I have never taken to any line of work with as much enthusiasm, alacrity and enjoyment as exploring the art of coding (and I do believe that the way in which developers chose to solve problems and leave their personal mark on projects does make it an art). I cannot wait to get started in full-time work as a developer and to see where my new career will take me. I will always keep my
+                experience in delivering client-minded software solutions, team management and mentoring at the heart of my approach to any new role. I am looking forward to bringing this value to new working environments along with a huge amount of passion. Here's to the rest of my life!
+            </p>
+        <img id="bioicon" src="./images/stave.jpg" alt="notes" />
+    </section>
+    <footer>
+        <div id="footerdiv">
+          <a id="emailicon" target="_blank" href="mailto:grjscott1991@hotmail.com"><img src="./images/download.png" alt="email"></a>
+          <a id="linkedinlogo" target="_blank" href="https://www.linkedin.com/in/george-scott-89948072/"><img src="./images/lnikedin.png" alt="email"></a>
+          <a id="twitterlogo" target="_blank" href="https://twitter.com/ScottyDoodleDoo?s=09"><img src="./images/Twitter_logo_blue.png" alt="email"></a>
+          <a id="githublogo" target="_blank" href="https://github.com/lancaster-coder1991"><img src="./images/GitHub_Logo.png" alt=""></a>
+        </div>
+      </div>
+      </footer>
 </body>
 </html>
