@@ -224,6 +224,12 @@ nav > a:active {
   background-color: #626c66;
 }
 
+hr.solid {
+  border-top: 1px solid black;
+  width: 85%;
+  margin-top: 5vh;
+}
+
 /* Home Page */
 
 #homebio {
@@ -312,30 +318,98 @@ footer {
 
 #bio {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
   width: 85%;
 }
 
 #firstpara {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 4;
   grid-row: 1;
 }
 
 #secondpara {
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 3;
   grid-row: 2;
 }
 
-#bioicon {
-  grid-column: 2 / span 1;
+#bioicon1 {
+  grid-column: 4 / span 1;
   grid-row: 2;
-  align-items: flex-end;
-  width: 100%;
-  border-radius: 20px;
-  background-color: transparent;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
 }
 
-*/ .biopara {
+#thirdpara {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+}
+
+#fourthpara {
+  grid-column: 1 / span 4;
+  grid-row: 4;
+}
+
+#fifthpara {
+  grid-column: 1 / span 4;
+  grid-row: 5;
+}
+
+#sixthpara {
+  grid-column: 2 / span 3;
+  grid-row: 6;
+}
+
+#bioicon2 {
+  width: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.biopara {
   width: 100%;
+}
+
+.experience_wrapper_grow {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-left: 5%;
+  padding-right: 5%;
+  transition: all 0.2s ease-in-out;
+  padding: 5%;
+  border: 1px dashed grey;
+  margin-bottom: 2%;
+}
+
+.experience_wrapper_grow:hover {
+  transform: scale(1.1);
+}
+
+#past_experience {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+li.grow {
+  transition: all 0.2s ease-in-out;
+  padding: 5%;
+  border: 1px dashed grey;
+  margin-bottom: 2%;
+}
+
+li.grow:hover {
+  transform: scale(1.1);
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 5%;
+  padding-right: 5%;
 }
