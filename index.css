@@ -7,6 +7,24 @@
   max-width: auto;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto Slab", serif;
+  vertical-align: middle;
+  margin: 0px;
+  font-size: 2vh;
+}
+
 .wrapper {
   background: #50a3a2;
   background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
@@ -143,24 +161,6 @@
   }
 }
 
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Roboto Slab", serif;
-  vertical-align: middle;
-  margin: 0px;
-  font-size: 2vh;
-}
-
 img {
   display: block;
   z-index: 2;
@@ -171,6 +171,12 @@ h1 {
   font-size: 3em;
   width: 100%;
   float: left;
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 2.5em;
+  }
 }
 
 @media screen and (width: 500px) {
@@ -200,7 +206,7 @@ h1 {
 
 #homeimg {
   width: 15%;
-  min-width: 180px;
+  min-width: 190px;
 }
 
 nav {
@@ -260,11 +266,6 @@ hr.solid {
   text-align: center;
 }
 
-.site_link {
-  text-decoration: none;
-  font-size: 3vh;
-}
-
 #topleftlist {
   grid-area: tl;
   left: 5px;
@@ -301,7 +302,7 @@ hr.solid {
 
 footer {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 #footerdiv {
@@ -313,16 +314,25 @@ footer {
 
 #footerdiv > a {
   padding: 20px;
-  font-size: 30px;
-  width: 50px;
   margin: auto;
-  text-decoration: none;
   flex: 1;
 }
 
 #footerdiv > a > img {
-  width: 100px;
+  width: 10vh;
   margin: auto;
+}
+
+@media screen and (max-width: 450px) {
+  #footerdiv {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #footerdiv {
+    width: 100%;
+  }
 }
 
 /* End Home Page */
@@ -452,12 +462,6 @@ footer {
   margin-right: 5%;
 }
 
-@media screen and (min-width: 1025px) {
-  .experience_wrapper_grow:hover {
-    transform: scale(1.1);
-  }
-}
-
 .experience {
   margin-right: 5%;
 }
@@ -467,24 +471,6 @@ footer {
   justify-self: center;
   align-self: center;
   margin-left: 1%;
-}
-
-@media screen and (max-width: 1024px) {
-  .experience_wrapper_grow {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    transition: all 0.2s ease-in-out;
-    padding: 5%;
-    border: 1px dashed grey;
-    margin-bottom: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .organisation_logo {
-    margin-top: 3%;
-    width: 50%;
-  }
 }
 
 #ldsm_logo {
@@ -511,7 +497,143 @@ footer {
   transition: all 0.2s ease-in-out;
 }
 
+.education_arrow {
+  width: 5%;
+  margin: auto;
+}
+
+/* End About Page */
+
+/* My Work Page */
+
+#tech_skills_flex {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+#tech_skills_flex > div {
+  flex: 1;
+}
+
+#tech {
+  text-align: center;
+}
+
+#skills {
+  text-align: center;
+}
+
+.icon_skills_wrapper {
+  padding: 3%;
+  padding-bottom: 1%;
+  border: 5px dashed lightgray;
+  text-align: center;
+  line-height: 5;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 80%;
+}
+
+i {
+  font-size: 8vh;
+  margin: 10px;
+}
+
+#skills_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+  list-style-type: none;
+  font-size: 2.5vh;
+}
+
+#work_divider {
+  margin-top: 5%;
+}
+
+#work_title {
+  margin-top: 5%;
+}
+
+#work_wrapper {
+  margin-top: 2%;
+  width: 75%;
+  display: grid;
+  gap: 3%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.work_flex_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-right: 2%;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  transition: all 0.2s ease-in-out;
+  border: 3px dashed lightgray;
+  padding: 2%;
+}
+
+.work_img {
+  width: 100%;
+  min-width: 100px;
+  margin-right: 5%;
+  max-width: 200px;
+  align-self: center;
+}
+
+.work_list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project_title {
+  margin-top: 3%;
+}
+
+.project_description {
+  margin: auto;
+}
+
+.work_github_link {
+  margin-top: auto;
+}
+
+@media screen and (min-width: 1025px) {
+  .education_wrapper_grow:hover {
+    transform: scale(1.1);
+  }
+  .experience_wrapper_grow:hover {
+    transform: scale(1.1);
+  }
+  .work_flex_container:hover {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .experience_wrapper_grow {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    transition: all 0.2s ease-in-out;
+    padding: 5%;
+    border: 1px dashed grey;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .organisation_logo {
+    margin-top: 3%;
+    width: 50%;
+  }
+  .education_arrow {
+    width: 15%;
+  }
   .education_wrapper_grow {
     width: 80%;
     justify-self: center;
@@ -522,21 +644,61 @@ footer {
     margin-bottom: 1.5%;
     margin-top: 1.5%;
   }
-}
-
-@media screen and (min-width: 1025px) {
-  .education_wrapper_grow:hover {
-    transform: scale(1.1);
+  #skills_list {
+    font-size: 2.2vh;
+  }
+  i {
+    font-size: 5vh;
+  }
+  #icon_skills_wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 5px dashed grey;
+  }
+  #tech_skills_flex {
+    width: 85%;
   }
 }
 
-.education_arrow {
-  width: 5%;
-  margin: auto;
+@media screen and (max-width: 500px) {
+  .tech_skills_header {
+    font-size: 1.2em;
+  }
+  #icon_skills_wrapper {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 3px dashed grey;
+  }
+  #work_title {
+    font-size: 1.2em;
+  }
+  #skills_list {
+    font-size: 2vh;
+  }
+  nav > a {
+    font-size: calc(10px + 1vw);
+  }
+  i {
+    font-size: 4vh;
+    margin: 0px;
+  }
 }
 
-@media screen and (max-width: 1024px) {
-  .education_arrow {
-    width: 15%;
+@media screen and (max-width: 300px) {
+  .tech_skills_header {
+    font-size: 1em;
+  }
+  #work_title {
+    font-size: 1em;
+  }
+  #skills_list {
+    font-size: 1.8vh;
+  }
+  nav > a {
+    font-size: calc(9px + 1vw);
+  }
+  i {
+    font-size: 3vh;
+    margin: 0px;
   }
 }
