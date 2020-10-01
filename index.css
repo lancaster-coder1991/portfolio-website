@@ -27,7 +27,6 @@
 } */
 
 .container {
-  max-width: 600px;
   margin: 0 auto;
   padding: 80px 0;
   /* height: 400px; */
@@ -43,7 +42,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 40%;
+  height: 30%;
   z-index: 1;
 }
 .bg-bubbles li {
@@ -53,7 +52,7 @@
   width: 40px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.15);
-  bottom: -160px;
+  bottom: -190px;
   -webkit-animation: square 25s infinite;
   animation: square 25s infinite;
   -webkit-transition-timing-function: linear;
@@ -117,6 +116,16 @@
   height: 160px;
   animation-delay: 11s;
 }
+
+@media only screen and (max-width: 1024px) {
+  .bg-bubbles li:nth-child(6) {
+    display: none;
+  }
+  .bg-bubbles li:nth-child(10) {
+    display: none;
+  }
+}
+
 @-webkit-keyframes square {
   0% {
     transform: translateY(0);
@@ -137,6 +146,9 @@
 html,
 body {
   overflow-x: hidden;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -150,13 +162,13 @@ body {
 }
 
 img {
-  max-width: 100%;
   display: block;
   z-index: 2;
+  max-width: 100%;
 }
 
 h1 {
-  font-size: 8vh;
+  font-size: 3em;
   width: 100%;
   float: left;
 }
@@ -168,7 +180,7 @@ h1 {
 }
 
 #subtitle {
-  font-size: 6vh;
+  font-size: 0.7em;
 }
 
 #titlediv {
@@ -188,8 +200,7 @@ h1 {
 
 #homeimg {
   width: 15%;
-  min-width: 150px;
-  flex-shrink: 0;
+  min-width: 180px;
 }
 
 nav {
@@ -240,16 +251,18 @@ hr.solid {
 
 #Main_Page_Lists {
   display: grid;
-  grid-gap: 3px;
-  grid-template-columns: 0.5fr repeat(2, 1.5fr) 0.5fr;
+  grid-gap: 25px;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr 1.5fr 0.5fr;
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
-    ". tl tr ."
-    ". bl br .";
+    ". tl . tr ."
+    ". bl . br .";
+  text-align: center;
 }
 
-.list_header {
-  text-align: center;
+.site_link {
+  text-decoration: none;
+  font-size: 3vh;
 }
 
 #topleftlist {
@@ -371,45 +384,159 @@ footer {
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  #bio {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  #firstpara {
+    order: -5;
+  }
+
+  #secondpara {
+    order: -4;
+  }
+
+  #bioicon1 {
+    grid-column: 4 / span 1;
+    grid-row: 2;
+    width: 50%;
+    align-self: center;
+    justify-self: center;
+    order: -3;
+  }
+
+  #thirdpara {
+    order: -2;
+  }
+
+  #fourthpara {
+    order: -1;
+  }
+
+  #fifthpara {
+    order: -0;
+  }
+
+  #sixthpara {
+    order: 1;
+  }
+
+  #bioicon2 {
+    width: 30%;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .biopara {
+    width: 100%;
+  }
+}
+
+#past_experience {
+  padding: 0px;
+  list-style-type: none;
+}
+
 .experience_wrapper_grow {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  padding-left: 5%;
-  padding-right: 5%;
   transition: all 0.2s ease-in-out;
   padding: 5%;
   border: 1px dashed grey;
   margin-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.experience_wrapper_grow:hover {
-  transform: scale(1.1);
+@media screen and (min-width: 1025px) {
+  .experience_wrapper_grow:hover {
+    transform: scale(1.1);
+  }
 }
 
-#past_experience {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding-left: 5%;
-  padding-right: 5%;
+.experience {
+  margin-right: 5%;
 }
 
-li.grow {
-  transition: all 0.2s ease-in-out;
-  padding: 5%;
-  border: 1px dashed grey;
-  margin-bottom: 2%;
+.organisation_logo {
+  width: 25%;
+  justify-self: center;
+  align-self: center;
+  margin-left: 1%;
 }
 
-li.grow:hover {
-  transform: scale(1.1);
+@media screen and (max-width: 1024px) {
+  .experience_wrapper_grow {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    transition: all 0.2s ease-in-out;
+    padding: 5%;
+    border: 1px dashed grey;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .organisation_logo {
+    margin-top: 3%;
+    width: 50%;
+  }
+}
+
+#ldsm_logo {
+  margin-left: 4%;
+  right: 5%;
 }
 
 #education {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0px;
+}
+
+.education_wrapper_grow {
+  width: 70%;
+  justify-self: center;
+  margin: auto;
+  border: 1px dashed grey;
+  border-radius: 25%;
+  padding: 5%;
+  margin-bottom: 1.5%;
+  margin-top: 1.5%;
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .education_wrapper_grow {
+    width: 80%;
+    justify-self: center;
+    margin: auto;
+    border: 1px dashed grey;
+    border-radius: 25%;
+    padding: 10%;
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .education_wrapper_grow:hover {
+    transform: scale(1.1);
+  }
+}
+
+.education_arrow {
+  width: 5%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .education_arrow {
+    width: 15%;
+  }
 }
