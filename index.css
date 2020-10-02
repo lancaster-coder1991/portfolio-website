@@ -169,19 +169,40 @@ img {
 
 h1 {
   font-size: 3em;
-  width: 100%;
-  float: left;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  overflow-wrap: normal;
+  max-width: 1000px;
+  padding-bottom: 10px;
+  color: white;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  /* margin: 0 auto; /* Gives that scrolling effect as the typing happens
+  margin-bottom: 0px; */
+  letter-spacing: 0.1em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-@media screen and (max-width: 420px) {
-  h1 {
-    font-size: 2.5em;
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
   }
 }
 
-@media screen and (width: 500px) {
-  body {
-    font-size: 5vh;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
   }
 }
 
@@ -189,24 +210,50 @@ h1 {
   font-size: 0.7em;
 }
 
+.css-typing > div {
+  margin: 0px;
+}
+
 #titlediv {
   display: flex;
   width: 100%;
   background-color: #034748;
-}
-
-.Title {
-  width: 75%;
-  text-align: center;
-  margin: auto;
-  max-width: 1000px;
-  padding-bottom: 10px;
-  color: white;
+  height: auto;
 }
 
 #homeimg {
   width: 15%;
   min-width: 190px;
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.5em;
+    width: 60%;
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 1.25em;
+  }
+  #homeimg {
+    min-width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (width: 500px) {
+  body {
+    font-size: 5vh;
+  }
 }
 
 nav {
@@ -245,6 +292,28 @@ hr.solid {
   border-top: 1px solid black;
   width: 85%;
   margin-top: 5vh;
+}
+
+main > * {
+  margin: auto;
+  text-align: center;
+}
+
+.main_content {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Home Page */
@@ -510,6 +579,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 75%;
+  margin-bottom: 3%;
 }
 
 #tech_skills_flex > div {
@@ -532,7 +602,7 @@ footer {
   line-height: 5;
   margin-left: 1%;
   margin-right: 1%;
-  height: 80%;
+  height: 90%;
 }
 
 i {
@@ -588,7 +658,6 @@ i {
 .work_list {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .project_title {
@@ -658,16 +727,30 @@ i {
   #tech_skills_flex {
     width: 85%;
   }
+  #work_wrapper {
+    margin-top: 2%;
+    width: 75%;
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media screen and (max-width: 500px) {
+  nav > a {
+    font-size: calc(10px + 1vw);
+  }
+  i {
+    font-size: 4vh;
+    margin: 0px;
+  }
   .tech_skills_header {
     font-size: 1.2em;
   }
-  #icon_skills_wrapper {
+  .icon_skills_wrapper {
     margin-left: 5%;
     margin-right: 5%;
-    border: 3px dashed grey;
+    border: 3px dashed lightgrey;
   }
   #work_title {
     font-size: 1.2em;
@@ -675,12 +758,12 @@ i {
   #skills_list {
     font-size: 2vh;
   }
-  nav > a {
-    font-size: calc(10px + 1vw);
-  }
-  i {
-    font-size: 4vh;
-    margin: 0px;
+  .work_img {
+    width: 100%;
+    min-width: 50px;
+    margin-right: 5%;
+    max-width: 200px;
+    align-self: center;
   }
 }
 
