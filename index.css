@@ -376,6 +376,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, auto);
   width: 85%;
+  text-align: left;
 }
 
 #firstpara {
@@ -623,6 +624,10 @@ i {
   align-self: center;
 }
 
+#skillshr-loader {
+  width: 3000px;
+}
+
 .work_list {
   display: flex;
   flex-direction: column;
@@ -702,6 +707,9 @@ i {
     gap: 1%;
     grid-template-columns: repeat(1, 1fr);
   }
+  #skillshr-loader {
+    max-width: 200px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -732,6 +740,9 @@ i {
     margin-right: 5%;
     max-width: 200px;
     align-self: center;
+  }
+  #skillshr-loader {
+    max-width: 200px;
   }
 }
 
